@@ -119,12 +119,12 @@
 										<ul class="dropdown-menu dropdown-menu-right dropdown-menu--grid">
 											<li n:foreach="$columns_visibility as $v_key => $visibility">
 												{if $visibility['visible']}
-													<a n:href="hideColumn!, column => $v_key" class="ajax">
+													<a n:href="hideColumn!, column => $v_key" class="dropdown-item ajax">
 														<i n:block = "icon-checked" class="{$icon_prefix}check-square-o"></i>
 														{include #column-header, column => $visibility['column']}
 													</a>
 												{else}
-													<a n:href="showColumn!, column => $v_key" class="ajax">
+													<a n:href="showColumn!, column => $v_key" class="dropdown-item ajax">
 														<i n:block = "icon-unchecked" class="{$icon_prefix}square-o"></i>
 														{include #column-header, column => $visibility['column']}
 													</a>
@@ -132,10 +132,10 @@
 											</li>
 											<li role="separator" class="divider"></li>
 											<li>
-												<a n:href="showAllColumns!" class="ajax"><i n:block = "icon-eye" class="{$icon_prefix}eye"></i> {='ublaboo_datagrid.show_all_columns'|translate}</a>
+												<a n:href="showAllColumns!" class="dropdown-item ajax"><i n:block = "icon-eye" class="{$icon_prefix}eye"></i> {='ublaboo_datagrid.show_all_columns'|translate}</a>
 											</li>
 											<li n:if="$control->hasSomeColumnDefaultHide()">
-												<a n:href="showDefaultColumns!" class="ajax"><i n:block = "icon-repeat" class="{$icon_prefix}repeat"></i> {='ublaboo_datagrid.show_default_columns'|translate}</a>
+												<a n:href="showDefaultColumns!" class="dropdown-item ajax"><i n:block = "icon-repeat" class="{$icon_prefix}repeat"></i> {='ublaboo_datagrid.show_default_columns'|translate}</a>
 											</li>
 										</ul>
 									</div>
@@ -184,8 +184,8 @@
 										</a>
 										<ul class="dropdown-menu dropdown-menu--grid">
 											<li>
-												<a n:href="hideColumn!, column => $key" class="ajax">
-													<i n:block = "icon-eye-slash" class="{$icon_prefix}eye-slash"></i> {='ublaboo_datagrid.hide_column'|translate}</a>
+												<a n:href="hideColumn!, column => $key" class="dropdown-item ajax">
+													<i n:block = "icon-eye-slash"></i> {='ublaboo_datagrid.hide_column'|translate}</a>
 											</li>
 										</ul>
 									</div>
